@@ -1,0 +1,22 @@
+name : new workflow
+
+on: push
+      - branch: master
+    schedule:
+      - cron: "0:0:0:0:0"
+
+job:
+ - runs on: ubuntu latest
+ - steps: 
+    - name: checkout
+      uses: actions/@checkout@v3
+
+    - name: node.js
+      uses: actions/setup-node@v3
+
+
+    - name: Install dependancies
+      uses: npm Install
+
+    - name: run test
+      uses: npm test
