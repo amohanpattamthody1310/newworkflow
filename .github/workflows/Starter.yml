@@ -19,7 +19,7 @@ jobs:
 
 
     - name: Install dependancies
-      uses: npm Install
+      run: npm install
 
     - name: run test
-      uses: npm test
+      run: npm test
