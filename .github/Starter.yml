@@ -3,11 +3,11 @@ name : new workflow
 on: push
       - branch: master
     schedule:
-      - cron: "0:0:0:0:0"
+      - cron: '* * * * *'
 
-job:
- - runs on: ubuntu latest
- - steps: 
+jobs:
+  runs on: ubuntu latest
+  steps: 
     - name: checkout
       uses: actions/@checkout@v3
 
